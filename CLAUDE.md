@@ -12,6 +12,8 @@ A set of Claude Code skills for AI safety research projects, designed for mentor
 | `/research-topic` | Deep-dive into a specific topic: find papers, extract dimensions, synthesize gaps |
 | `/novelty-check` | Assess whether an idea is genuinely novel or already covered in the literature |
 | `/runpodctl` | Manage RunPod GPU pods, serverless endpoints, templates, and volumes |
+| `/gdoc` | Read, edit, and comment on Google Docs via CLI |
+| `/inspect-read-logs` | Analyse Inspect AI evaluation log files (metrics, failed samples, token usage) |
 
 ## Suggested Workflow
 
