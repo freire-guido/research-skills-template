@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:arxiv.org)",
+      "WebFetch(domain:www.alignmentforum.org)",
+      "WebFetch(domain:www.lesswrong.com)",
+      "WebFetch(domain:openreview.net)",
+      "WebFetch(domain:aclanthology.org)",
+      "WebFetch(domain:www.semanticscholar.org)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:transformer-circuits.pub)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "WebFetch(domain:www.anthropic.com)",
+      "WebFetch(domain:metr.org)",
+      "WebFetch(domain:www.apolloresearch.ai)",
+      "WebFetch(domain:forum.effectivealtruism.org)",
+      "WebFetch(domain:blog.bluedot.org)",
+      "WebFetch(domain:www.aisi.gov.uk)",
+      "WebFetch(domain:inspect.ai-safety-institute.org.uk)",
+      "Bash(runpodctl:*)",
+      "Bash(mkdir:*)",
+      "Bash(ls:*)"
+    ]
+  }
+}
