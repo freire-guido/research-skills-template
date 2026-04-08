@@ -32,4 +32,3 @@ Originalmente compilada para "Technical AI Safety Projects" de [BAISH](https://b
 2. `/literature-review` para entender qué existe en el área
 3. `/evaluate-idea` para formalizar y puntuar la idea
 4. `/novelty-check` para verificar que la pregunta esté abierta
-5. `/runpodctl` te levanta compute cuando estés listo para jugar
