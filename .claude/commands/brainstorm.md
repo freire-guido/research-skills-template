@@ -32,7 +32,19 @@ Generate 3-5 research idea sketches tailored to their constraints. For each idea
 
 ### If the user asks a research question:
 
-Use WebSearch to find related papers and prior work. Summarize:
+Search for related papers and prior work. Use both WebSearch and structured database queries:
+
+```bash
+uv run python -m tools.citation search-s2 '<core question terms>'
+uv run python -m tools.citation search-crossref '<core question terms>'
+```
+
+For relevant papers found, fetch key sections to inform the answer:
+```bash
+uv run python -m tools.paper_fetcher fetch '<arxiv_or_lw_url>'
+```
+
+Summarize:
 - What's been done in this area
 - What gaps remain
 - Whether the question is open or largely resolved

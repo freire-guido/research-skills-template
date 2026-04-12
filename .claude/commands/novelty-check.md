@@ -43,6 +43,23 @@ Use a **two-tier search strategy**:
 >
 > Search arXiv, Semantic Scholar, Google Scholar, and OpenReview.
 > For promising results, use WebFetch to read the abstract or summary.
+>
+> Also run structured database searches:
+> ```bash
+> uv run python -m tools.citation search-crossref '<problem_level_terms>'
+> uv run python -m tools.citation search-s2 '<problem_level_terms>'
+> uv run python -m tools.citation search-crossref '<method_level_terms>'
+> uv run python -m tools.citation search-s2 '<method_level_terms>'
+> ```
+>
+> For papers that seem directly relevant but where the abstract is ambiguous, fetch key sections:
+> ```bash
+> uv run python -m tools.paper_fetcher fetch '<arxiv_url>'
+> ```
+>
+> Also search for highly-starred GitHub repositories on this topic (may reveal widely-adopted tools or benchmarks that indicate a solved problem):
+> WebSearch: `site:github.com [topic] stars`
+>
 > Return: a list of relevant works with title, URL, and 1-2 sentences on how each relates to the idea.
 
 **Subagent 2: LessWrong and Alignment Forum**
@@ -58,7 +75,11 @@ Use a **two-tier search strategy**:
 > - "[research question without method]"
 > - "[specific approach keywords]"
 >
-> For promising results, use WebFetch to read the post introduction.
+> For promising results, use WebFetch to read the post introduction. For posts that seem highly relevant, fetch the full content:
+> ```bash
+> uv run python -m tools.paper_fetcher fetch '<lw_or_af_url>'
+> ```
+>
 > Return: a list of relevant posts with title, URL, and 1-2 sentences on relevance.
 
 After both subagents complete, merge and deduplicate results by URL.

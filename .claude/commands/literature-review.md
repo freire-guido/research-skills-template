@@ -52,6 +52,11 @@ Launch parallel subagents to search different categories simultaneously. Each su
 - Search: "[topic] evaluation tool"
 - Identify existing infrastructure and gaps
 
+### Category 6: GitHub Repositories
+- Search: `site:github.com [topic] AI safety` — look for widely-adopted tools and frameworks
+- Search: `github [topic] safety stars` — high-star repos signal community adoption and may indicate de-facto standards or solved problems
+- Look for: evaluation harnesses, benchmarks, reference implementations, datasets
+
 If the topic is narrow, fewer categories may be needed. Use judgment.
 
 ## Step 3: Synthesize

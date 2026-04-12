@@ -47,9 +47,9 @@ Wait for confirmation before searching.
 
 Launch **3 parallel subagents** to search different sources simultaneously:
 
-**Subagent 1: Academic Literature**
+**Subagent 1: Academic Literature + Repositories**
 
-> You are searching academic databases for papers on a research topic.
+> You are searching academic databases and GitHub for papers and tools on a research topic.
 >
 > **Topic:** [TOPIC]
 > **Search terms:** [KEY TERMS]
@@ -60,6 +60,16 @@ Launch **3 parallel subagents** to search different sources simultaneously:
 > - "[topic] arxiv"
 > - "[topic] open problems" or "[topic] challenges"
 > - Alternative terminology variations
+>
+> Also run structured database searches:
+> ```bash
+> uv run python -m tools.citation search-s2 '<primary search terms>'
+> uv run python -m tools.citation search-crossref '<primary search terms>'
+> ```
+>
+> Search GitHub for widely-adopted repositories on this topic (high-star repos reveal de-facto tools and benchmarks):
+> - WebSearch: `site:github.com [topic] [key term] stars`
+> - WebSearch: `github [topic] AI safety implementation`
 >
 > For each relevant result, record: title, URL, source, year, and a 1-2 sentence summary of relevance.
 > Return your findings as a structured list. Aim for 15-25 unique results.

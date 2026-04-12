@@ -97,15 +97,15 @@ Run a two-tier literature search. The key question is whether the **problem** is
 **Tier 2 — Method-level:**
 - WebSearch: "[specific approach proposed]"
 
-**Structured database search** (run from `saim/` directory if available):
+**Structured database search:**
 ```bash
-cd saim && uv run python -m saim.verification.citation search-crossref '<problem_level_terms>'
-cd saim && uv run python -m saim.verification.citation search-s2 '<problem_level_terms>'
+uv run python -m tools.citation search-crossref '<problem_level_terms>'
+uv run python -m tools.citation search-s2 '<problem_level_terms>'
 ```
 
 **Deep reading** — if a paper looks directly relevant but you're unsure from the abstract:
 ```bash
-cd saim && uv run python -m saim.connectors.paper_fetcher fetch '<arxiv_or_lw_url>'
+uv run python -m tools.paper_fetcher fetch '<arxiv_or_lw_url>'
 ```
 
 Report what was found and update the Novelty score accordingly.
